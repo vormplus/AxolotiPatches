@@ -1,0 +1,452 @@
+<patch-1.0>
+   <comment type="patch/comment" sha="sha" name="Effects" x="1152" y="24"/>
+   <comment type="patch/comment" sha="sha" name="Sync the Super 808 with the Midi Clock" x="28" y="28"/>
+   <comment type="patch/comment" sha="sha" name="Step Sequencer" x="350" y="28"/>
+   <comment type="patch/comment" sha="sha" name="Mixer for individual 808 samples" x="784" y="28"/>
+   <comment type="patch/comment" sha="sha" name="Master audio mixer" x="1456" y="28"/>
+   <obj type="midi/in/clock" sha="13586a64672deab674298a2d8c8ad917b055c653" name="clockin_1" x="28" y="56">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_1" x="126" y="56">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/i" sha="f181c855026fdce66f3c38cd8c5438343d6f0869" name="16th" x="308" y="56">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 16" sha="6202b6944fb6704b4fcdfb66663aba8e11d266d4" name="ibar_1" x="350" y="56">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/or 2" sha="d7f898c6d323d5b2bb8a39859aae4e049141b870" name="or_1" x="658" y="56">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="wave/flashplay" sha="fa9d96b0101e245814c5df3a60d5dd75583462ad" name="flashplay_1" x="784" y="56">
+      <params/>
+      <attribs>
+         <combo attributeName="sample" selection="808bd"/>
+      </attribs>
+   </obj>
+   <obj type="mix/mix 8 g" sha="f14ebfdf5c3e6e14ef78efd566de8b5f7ad52b37" name="mix_1" x="952" y="56">
+      <params>
+         <frac32.u.map name="gain1" MidiCC="22" value="63.5"/>
+         <frac32.u.map name="gain2" MidiCC="23" value="15.5"/>
+         <frac32.u.map name="gain3" MidiCC="24" value="15.5"/>
+         <frac32.u.map name="gain4" MidiCC="25" value="63.5"/>
+         <frac32.u.map name="gain5" MidiCC="26" value="63.5"/>
+         <frac32.u.map name="gain6" MidiCC="27" value="63.0"/>
+         <frac32.u.map name="gain7" MidiCC="28" value="53.5"/>
+         <frac32.u.map name="gain8" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 8 g" sha="f14ebfdf5c3e6e14ef78efd566de8b5f7ad52b37" name="mix_2" x="1456" y="56">
+      <params>
+         <frac32.u.map name="gain1" MidiCC="14" value="63.5"/>
+         <frac32.u.map name="gain2" MidiCC="15" value="44.0"/>
+         <frac32.u.map name="gain3" MidiCC="16" value="0.0"/>
+         <frac32.u.map name="gain4" MidiCC="17" value="63.5"/>
+         <frac32.u.map name="gain5" MidiCC="18" value="0.0"/>
+         <frac32.u.map name="gain6" MidiCC="19" value="63.5"/>
+         <frac32.u.map name="gain7" MidiCC="20" value="0.0"/>
+         <frac32.u.map name="gain8" MidiCC="21" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" sha="b933bb91801a126126313c11f773158b5ca2face" name="out_1" x="1582" y="56">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="sel/sel b 16 8t" sha="d1861c4678841e9b3b40304bf108557c65d42cb5" name="sel_1" x="350" y="112">
+      <params>
+         <bin16 name="p1" value="0"/>
+         <bin16 name="p2" value="0"/>
+         <bin16 name="p3" value="0"/>
+         <bin16 name="p4" value="0"/>
+         <bin16 name="p5" value="0"/>
+         <bin16 name="p6" value="0"/>
+         <bin16 name="p7" value="0"/>
+         <bin16 name="p8" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="logic/or 2" sha="d7f898c6d323d5b2bb8a39859aae4e049141b870" name="or_2" x="658" y="112">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="wave/flashplay" sha="fa9d96b0101e245814c5df3a60d5dd75583462ad" name="flashplay_2" x="784" y="112">
+      <params/>
+      <attribs>
+         <combo attributeName="sample" selection="808snare"/>
+      </attribs>
+   </obj>
+   <obj type="filter/vcf3~" sha="a4c7bb4270fc01be85be81c8f212636b9c54eaea" name="vcf3~_1" x="1152" y="164">
+      <params>
+         <frac32.s.map name="pitch" MidiCC="29" value="30.0"/>
+         <frac32.u.map name="reso" MidiCC="30" value="44.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="math/divremc" sha="a9507fb906b40fc4885ac66c9e4b34b840e8164d" name="divremc_2" x="28" y="168">
+      <params/>
+      <attribs>
+         <spinner attributeName="denominator" value="6"/>
+      </attribs>
+   </obj>
+   <obj type="math/divremc" sha="a9507fb906b40fc4885ac66c9e4b34b840e8164d" name="divremc_3" x="154" y="168">
+      <params/>
+      <attribs>
+         <spinner attributeName="denominator" value="16"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" sha="d7f898c6d323d5b2bb8a39859aae4e049141b870" name="or_3" x="658" y="168">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="wave/flashplay" sha="fa9d96b0101e245814c5df3a60d5dd75583462ad" name="flashplay_3" x="784" y="168">
+      <params/>
+      <attribs>
+         <combo attributeName="sample" selection="808hatopen"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" sha="d7f898c6d323d5b2bb8a39859aae4e049141b870" name="or_4" x="658" y="224">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="wave/flashplay" sha="fa9d96b0101e245814c5df3a60d5dd75583462ad" name="flashplay_4" x="784" y="224">
+      <params/>
+      <attribs>
+         <combo attributeName="sample" selection="808hatclose"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" sha="d7f898c6d323d5b2bb8a39859aae4e049141b870" name="or_5" x="658" y="280">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="wave/flashplay" sha="fa9d96b0101e245814c5df3a60d5dd75583462ad" name="flashplay_5" x="784" y="280">
+      <params/>
+      <attribs>
+         <combo attributeName="sample" selection="808hitom"/>
+      </attribs>
+   </obj>
+   <obj type="delay/echo fdbk mix" sha="779c3b8c43bc1738d3ebf6d4bdaee2b7d50b70ee" name="echo_1" x="1152" y="318">
+      <params>
+         <frac32.u.map name="mix" MidiCC="31" value="63.5"/>
+         <frac32.u.map name="feedback" MidiCC="32" value="63.5"/>
+      </params>
+      <attribs>
+         <int attributeName="delaylength" value="3227"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" sha="d7f898c6d323d5b2bb8a39859aae4e049141b870" name="or_6" x="658" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="wave/flashplay" sha="fa9d96b0101e245814c5df3a60d5dd75583462ad" name="flashplay_6" x="784" y="336">
+      <params/>
+      <attribs>
+         <combo attributeName="sample" selection="808midtom"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" sha="d7f898c6d323d5b2bb8a39859aae4e049141b870" name="or_7" x="658" y="392">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="wave/flashplay" sha="fa9d96b0101e245814c5df3a60d5dd75583462ad" name="flashplay_7" x="784" y="392">
+      <params/>
+      <attribs>
+         <combo attributeName="sample" selection="808lotom"/>
+      </attribs>
+   </obj>
+   <comment type="patch/comment" sha="sha" name="Individual notes for use with external sequencer" x="350" y="406"/>
+   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keyb_1" x="350" y="434">
+      <params/>
+      <attribs>
+         <spinner attributeName="note" value="60"/>
+      </attribs>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_2" x="476" y="448">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="filter/bp m" sha="a25093c84aee366b25d3c47fde6d67f5ef8a814e" name="bp_1" x="1148" y="504">
+      <params>
+         <frac32.s.map name="pitch" MidiCC="33" value="63.0"/>
+         <frac32.u.map name="reso" MidiCC="34" value="42.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keyb_2" x="350" y="532">
+      <params/>
+      <attribs>
+         <spinner attributeName="note" value="61"/>
+      </attribs>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_3" x="476" y="532">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keyb_3" x="350" y="630">
+      <params/>
+      <attribs>
+         <spinner attributeName="note" value="62"/>
+      </attribs>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_4" x="476" y="630">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="filter/lp m" sha="649887a8ccb34e5928d77426b8db79bed3e57f0f" name="lp_1" x="1152" y="654">
+      <params>
+         <frac32.s.map name="pitch" MidiCC="35" value="-40.0"/>
+         <frac32.u.map name="reso" MidiCC="36" value="1.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keyb_4" x="350" y="728">
+      <params/>
+      <attribs>
+         <spinner attributeName="note" value="63"/>
+      </attribs>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_5" x="476" y="728">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="dist/schmitttrigger" sha="b6a051f4b960da5fe758d0b8bb723fa9a427a1b" name="schmitttrigger_1" x="1152" y="808">
+      <params>
+         <frac32.u.map name="hysteresis" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 1" sha="f543e080bd2111cba525885443039f346703a594" name="mix_3" x="1264" y="808">
+      <params>
+         <frac32.u.map name="gain1" value="4.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keyb_5" x="350" y="826">
+      <params/>
+      <attribs>
+         <spinner attributeName="note" value="64"/>
+      </attribs>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_6" x="476" y="826">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keyb_6" x="350" y="924">
+      <params/>
+      <attribs>
+         <spinner attributeName="note" value="65"/>
+      </attribs>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_7" x="476" y="924">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb note" sha="5d623ad73ade2280421069a67ee3f30595794c72" name="keyb_7" x="350" y="1022">
+      <params/>
+      <attribs>
+         <spinner attributeName="note" value="66"/>
+      </attribs>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="dispb_8" x="476" y="1022">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source name="mix_2 out"/>
+         <dest name="out_1 left"/>
+         <dest name="out_1 right"/>
+      </net>
+      <net>
+         <source name="flashplay_7 out"/>
+         <dest name="mix_1 in7"/>
+      </net>
+      <net>
+         <source name="flashplay_6 out"/>
+         <dest name="mix_1 in6"/>
+      </net>
+      <net>
+         <source name="flashplay_5 out"/>
+         <dest name="mix_1 in5"/>
+      </net>
+      <net>
+         <source name="flashplay_4 out"/>
+         <dest name="mix_1 in4"/>
+      </net>
+      <net>
+         <source name="flashplay_3 out"/>
+         <dest name="mix_1 in3"/>
+      </net>
+      <net>
+         <source name="flashplay_2 out"/>
+         <dest name="mix_1 in2"/>
+      </net>
+      <net>
+         <source name="flashplay_1 out"/>
+         <dest name="mix_1 in1"/>
+      </net>
+      <net>
+         <source name="divremc_2 div"/>
+         <dest name="divremc_3 a"/>
+      </net>
+      <net>
+         <source name="divremc_3 div"/>
+         <dest name="16th in"/>
+      </net>
+      <net>
+         <source name="clockin_1 pos24ppq"/>
+         <dest name="divremc_2 a"/>
+      </net>
+      <net>
+         <source name="clockin_1 active"/>
+         <dest name="dispb_1 in"/>
+      </net>
+      <net>
+         <source name="divremc_3 rem"/>
+         <dest name="ibar_1 in"/>
+         <dest name="sel_1 in"/>
+      </net>
+      <net>
+         <source name="mix_1 out"/>
+         <dest name="mix_2 in1"/>
+         <dest name="vcf3~_1 in"/>
+         <dest name="echo_1 in"/>
+         <dest name="lp_1 in"/>
+         <dest name="schmitttrigger_1 in"/>
+         <dest name="bp_1 in"/>
+      </net>
+      <net>
+         <source name="vcf3~_1 out"/>
+         <dest name="mix_2 in2"/>
+      </net>
+      <net>
+         <source name="echo_1 out"/>
+         <dest name="mix_2 in3"/>
+      </net>
+      <net>
+         <source name="lp_1 out"/>
+         <dest name="mix_2 in5"/>
+      </net>
+      <net>
+         <source name="schmitttrigger_1 out"/>
+         <dest name="mix_3 in1"/>
+      </net>
+      <net>
+         <source name="mix_3 out"/>
+         <dest name="mix_2 in6"/>
+      </net>
+      <net>
+         <source name="keyb_1 gate"/>
+         <dest name="dispb_2 in"/>
+         <dest name="or_1 i2"/>
+      </net>
+      <net>
+         <source name="keyb_2 gate"/>
+         <dest name="dispb_3 in"/>
+         <dest name="or_2 i2"/>
+      </net>
+      <net>
+         <source name="keyb_3 gate"/>
+         <dest name="dispb_4 in"/>
+         <dest name="or_3 i2"/>
+      </net>
+      <net>
+         <source name="keyb_4 gate"/>
+         <dest name="dispb_5 in"/>
+         <dest name="or_4 i2"/>
+      </net>
+      <net>
+         <source name="keyb_5 gate"/>
+         <dest name="dispb_6 in"/>
+         <dest name="or_5 i2"/>
+      </net>
+      <net>
+         <source name="keyb_6 gate"/>
+         <dest name="dispb_7 in"/>
+         <dest name="or_6 i2"/>
+      </net>
+      <net>
+         <source name="keyb_7 gate"/>
+         <dest name="dispb_8 in"/>
+         <dest name="or_7 i2"/>
+      </net>
+      <net>
+         <source name="sel_1 o1"/>
+         <dest name="or_1 i1"/>
+      </net>
+      <net>
+         <source name="sel_1 o2"/>
+         <dest name="or_2 i1"/>
+      </net>
+      <net>
+         <source name="sel_1 o3"/>
+         <dest name="or_3 i1"/>
+      </net>
+      <net>
+         <source name="sel_1 o4"/>
+         <dest name="or_4 i1"/>
+      </net>
+      <net>
+         <source name="sel_1 o5"/>
+         <dest name="or_5 i1"/>
+      </net>
+      <net>
+         <source name="sel_1 o6"/>
+         <dest name="or_6 i1"/>
+      </net>
+      <net>
+         <source name="sel_1 o7"/>
+         <dest name="or_7 i1"/>
+      </net>
+      <net>
+         <source name="or_1 o"/>
+         <dest name="flashplay_1 trig"/>
+      </net>
+      <net>
+         <source name="or_2 o"/>
+         <dest name="flashplay_2 trig"/>
+      </net>
+      <net>
+         <source name="or_3 o"/>
+         <dest name="flashplay_3 trig"/>
+      </net>
+      <net>
+         <source name="or_4 o"/>
+         <dest name="flashplay_4 trig"/>
+      </net>
+      <net>
+         <source name="or_5 o"/>
+         <dest name="flashplay_5 trig"/>
+      </net>
+      <net>
+         <source name="or_6 o"/>
+         <dest name="flashplay_6 trig"/>
+      </net>
+      <net>
+         <source name="or_7 o"/>
+         <dest name="flashplay_7 trig"/>
+      </net>
+      <net>
+         <source name="bp_1 out"/>
+         <dest name="mix_2 in4"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+      <MidiChannel>1</MidiChannel>
+      <NPresets>8</NPresets>
+      <NPresetEntries>32</NPresetEntries>
+      <NModulationSources>8</NModulationSources>
+      <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+      <Author>Jan Vantomme</Author>
+      <Saturate>true</Saturate>
+   </settings>
+   <notes><![CDATA[]]></notes>
+</patch-1.0>
