@@ -7,6 +7,12 @@ A collection of patches for the [Axoloti](http://axoloti.be/) platform. All patc
 * SimpleBass: A monophonic bass synthesizer with two sine wave oscillators.
 * SimpleBassADSR: Same as SimpleBass, but with an ADSR envelope for each oscillator.
 
+## Pads
+
+* 8BitPad
+* DreamPad
+* VibraPad
+
 ## Misc Patches
 
 ### SineBells Mono
