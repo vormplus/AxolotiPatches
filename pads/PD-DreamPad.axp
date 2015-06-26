@@ -1,0 +1,154 @@
+<patch-1.0>
+   <obj type="midi/in/keyb" sha="b8deb97637e54be31fcb62e849e4fa406e72256e" name="keyb_1" x="70" y="42">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="env/adsr" sha="49cacd3004d35eb333d8c9004945061c0ce24b01" name="adsr_1" x="280" y="42">
+      <params>
+         <frac32.s.map name="a" value="-64.0"/>
+         <frac32.s.map name="d" value="31.0"/>
+         <frac32.u.map name="s" value="52.5"/>
+         <frac32.s.map name="r" value="63.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="osc/saw" sha="1a5088484533a3633e3eb849de47b478f1599369" name="saw_1" x="462" y="112">
+      <params>
+         <frac32.s.map name="pitch" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="vca_1" x="630" y="112">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 2 g" sha="f14eeeeb6df032a7e072e970956c20613eb267f1" name="mix_1" x="784" y="126">
+      <params>
+         <frac32.u.map name="gain1" value="56.0"/>
+         <frac32.u.map name="gain2" value="54.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="filter/bp svf m" sha="561e56d24bf5c702564c7d043fda6d0d3003deec" name="bp_1" x="924" y="140">
+      <params>
+         <frac32.s.map name="pitch" value="-26.0"/>
+         <frac32.u.map name="reso" value="43.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="math/*c" sha="3ade427ae7291fdf62058c4243fe718758187105" name="*c_1" x="1064" y="140">
+      <params>
+         <frac32.u.map name="amp" value="10.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" sha="b933bb91801a126126313c11f773158b5ca2face" name="out_1" x="1218" y="140">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="vca_2" x="630" y="182">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="vca_3" x="630" y="308">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="lfo/sine" sha="6215955d70f249301aa4141e75bdbc58d2782ae6" name="sine_1" x="784" y="322">
+      <params>
+         <frac32.s.map name="pitch" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="env/adsr" sha="49cacd3004d35eb333d8c9004945061c0ce24b01" name="adsr_2" x="280" y="364">
+      <params>
+         <frac32.s.map name="a" value="-44.0"/>
+         <frac32.s.map name="d" value="63.0"/>
+         <frac32.u.map name="s" value="58.0"/>
+         <frac32.s.map name="r" value="39.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="vca_4" x="630" y="378">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="osc/saw" sha="1a5088484533a3633e3eb849de47b478f1599369" name="saw_3" x="462" y="434">
+      <params>
+         <frac32.s.map name="pitch" value="-4.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source name="keyb_1 gate"/>
+         <dest name="adsr_1 gate"/>
+         <dest name="adsr_2 gate"/>
+      </net>
+      <net>
+         <source name="keyb_1 note"/>
+         <dest name="bp_1 pitchm"/>
+         <dest name="saw_3 pitchm"/>
+         <dest name="saw_1 pitchm"/>
+         <dest name="sine_1 pitchm"/>
+      </net>
+      <net>
+         <source name="vca_1 o"/>
+         <dest name="vca_2 a"/>
+      </net>
+      <net>
+         <source name="vca_3 o"/>
+         <dest name="vca_4 a"/>
+      </net>
+      <net>
+         <source name="vca_2 o"/>
+         <dest name="mix_1 in1"/>
+      </net>
+      <net>
+         <source name="vca_4 o"/>
+         <dest name="mix_1 in2"/>
+      </net>
+      <net>
+         <source name="*c_1 out"/>
+         <dest name="out_1 left"/>
+         <dest name="out_1 right"/>
+      </net>
+      <net>
+         <source name="adsr_1 env"/>
+         <dest name="vca_1 v"/>
+      </net>
+      <net>
+         <source name="adsr_2 env"/>
+         <dest name="vca_3 v"/>
+      </net>
+      <net>
+         <source name="keyb_1 velocity"/>
+         <dest name="vca_2 v"/>
+         <dest name="vca_4 v"/>
+      </net>
+      <net>
+         <source name="mix_1 out"/>
+         <dest name="bp_1 in"/>
+      </net>
+      <net>
+         <source name="bp_1 out"/>
+         <dest name="*c_1 in"/>
+      </net>
+      <net>
+         <source name="saw_3 wave"/>
+         <dest name="vca_3 a"/>
+      </net>
+      <net>
+         <source name="saw_1 wave"/>
+         <dest name="vca_1 a"/>
+      </net>
+      <net>
+         <source name="sine_1 wave"/>
+         <dest name="bp_1 resom"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+</patch-1.0>

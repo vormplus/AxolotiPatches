@@ -1,0 +1,131 @@
+<patch-1.0>
+   <obj type="midi/in/keyb" sha="b8deb97637e54be31fcb62e849e4fa406e72256e" name="keyb_1" x="28" y="28">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="env/adsr" sha="49cacd3004d35eb333d8c9004945061c0ce24b01" name="adsr_1" x="238" y="42">
+      <params>
+         <frac32.s.map name="a" value="-45.0"/>
+         <frac32.s.map name="d" value="0.0"/>
+         <frac32.u.map name="s" value="0.0"/>
+         <frac32.s.map name="r" value="49.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="osc/saw" sha="1a5088484533a3633e3eb849de47b478f1599369" name="saw_1" x="406" y="56">
+      <params>
+         <frac32.s.map name="pitch" value="-4.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="vca_1" x="602" y="56">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 2 g" sha="f14eeeeb6df032a7e072e970956c20613eb267f1" name="mix_1" x="812" y="56">
+      <params>
+         <frac32.u.map name="gain1" value="48.5"/>
+         <frac32.u.map name="gain2" value="56.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="math/*c" sha="3ade427ae7291fdf62058c4243fe718758187105" name="*c_1" x="994" y="70">
+      <params>
+         <frac32.u.map name="amp" value="12.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" sha="b933bb91801a126126313c11f773158b5ca2face" name="out_1" x="1190" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="vca_2" x="602" y="140">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="env/adsr" sha="49cacd3004d35eb333d8c9004945061c0ce24b01" name="adsr_2" x="238" y="252">
+      <params>
+         <frac32.s.map name="a" value="-27.0"/>
+         <frac32.s.map name="d" value="0.0"/>
+         <frac32.u.map name="s" value="48.0"/>
+         <frac32.s.map name="r" value="51.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="vca_3" x="602" y="252">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="osc/saw" sha="1a5088484533a3633e3eb849de47b478f1599369" name="saw_2" x="420" y="308">
+      <params>
+         <frac32.s.map name="pitch" value="-21.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="6bbeaeb94e74091879965461ad0cb043f2e7f6cf" name="vca_4" x="602" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source name="keyb_1 gate"/>
+         <dest name="adsr_1 gate"/>
+         <dest name="adsr_2 gate"/>
+      </net>
+      <net>
+         <source name="keyb_1 note"/>
+         <dest name="saw_1 pitchm"/>
+         <dest name="saw_2 pitchm"/>
+      </net>
+      <net>
+         <source name="saw_1 wave"/>
+         <dest name="vca_1 a"/>
+      </net>
+      <net>
+         <source name="keyb_1 velocity"/>
+         <dest name="vca_2 v"/>
+         <dest name="vca_4 v"/>
+      </net>
+      <net>
+         <source name="adsr_1 env"/>
+         <dest name="vca_1 v"/>
+      </net>
+      <net>
+         <source name="adsr_2 env"/>
+         <dest name="vca_3 v"/>
+      </net>
+      <net>
+         <source name="vca_1 o"/>
+         <dest name="vca_2 a"/>
+      </net>
+      <net>
+         <source name="vca_3 o"/>
+         <dest name="vca_4 a"/>
+      </net>
+      <net>
+         <source name="vca_2 o"/>
+         <dest name="mix_1 in1"/>
+      </net>
+      <net>
+         <source name="vca_4 o"/>
+         <dest name="mix_1 in2"/>
+      </net>
+      <net>
+         <source name="mix_1 out"/>
+         <dest name="*c_1 in"/>
+      </net>
+      <net>
+         <source name="*c_1 out"/>
+         <dest name="out_1 left"/>
+         <dest name="out_1 right"/>
+      </net>
+      <net>
+         <source name="saw_2 wave"/>
+         <dest name="vca_3 a"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+</patch-1.0>
