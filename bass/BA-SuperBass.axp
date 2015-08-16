@@ -1,0 +1,518 @@
+<patch-1.0>
+   <comment type="patch/comment" x="462" y="14" text="Oscillators are tuned to C3, C4 and C5. Do not change them!"/>
+   <comment type="patch/comment" x="462" y="28" text="You can switch between Saw or Square for each oscillator."/>
+   <obj type="ctrl/i radio 2 h" sha="b8d8c3c7534a44a1e35eda89a316a9b117d2016c" uuid="965a945535a206a17296f000802fd0cfaf0e09e0" name="Saw/Square 1" x="462" y="61">
+      <params>
+         <int32.hradio name="value" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb mod" sha="f260e12fe47ac77a26f84d35423e8661908d3040" uuid="abcd509d15e7d13d5381203fd2b4d0ac6fe57bb3" name="keyb_1" x="28" y="103">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="env/adsr" sha="2c4b16047d03b574d8a72b651f130895749eb670" uuid="d1dbcc5fa6f87b98a6a91c87fd44acee5e690bac" name="adsr_1" x="191" y="103">
+      <params>
+         <frac32.s.map name="a" value="-64.0"/>
+         <frac32.s.map name="d" value="31.0"/>
+         <frac32.u.map name="s" value="10.5"/>
+         <frac32.s.map name="r" value="-27.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="osc/saw" sha="fe2c3c02396657dfbc225c73f9340ad0c4c3eea6" uuid="739ecc36017ef3249479b8f01716b8bbfba9abc1" name="saw_1" x="462" y="117">
+      <params>
+         <frac32.s.map name="pitch" value="-16.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="798" y="154" text="Oscillator 1 will always be on."/>
+   <obj type="mux/mux 2" sha="10c5b6d774e8c972b6bb863dad23e83034e0990f" uuid="539c246f4c360ac476e128cfbfa84348fb7f7e73" name="mux_2" x="602" y="159">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="c904cdd24d65968df2f5796e107db3747dd691a6" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_1" x="728" y="159">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="osc/square" sha="7cccf8a95bf312ecc084f11f532cf5fda00b8c58" uuid="aa9592566d3673fe64dcaede132e9ebd45d2202f" name="square_1" x="462" y="201">
+      <params>
+         <frac32.s.map name="pitch" value="-16.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="c904cdd24d65968df2f5796e107db3747dd691a6" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_2" x="728" y="215">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="filter/integrator" sha="a02824571a17109fc739054a69ec599ecdfa052f" uuid="ac0c34004d5f65a96cd8cfc488296ed923b7beac" name="integrator_2" x="798" y="229">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i radio 2 h" sha="b8d8c3c7534a44a1e35eda89a316a9b117d2016c" uuid="965a945535a206a17296f000802fd0cfaf0e09e0" name="Saw/Square 2" x="462" y="327">
+      <params>
+         <int32.hradio name="value" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="42" y="364" text="Turn the dial on the"/>
+   <comment type="patch/comment" x="196" y="364" text="Change the LFO Type"/>
+   <comment type="patch/comment" x="322" y="364" text="Change the LFO Target"/>
+   <comment type="patch/comment" x="42" y="378" text="LFO to change intensity"/>
+   <comment type="patch/comment" x="196" y="378" text="0: Square"/>
+   <comment type="patch/comment" x="322" y="378" text="0: LFO Off"/>
+   <obj type="osc/saw" sha="fe2c3c02396657dfbc225c73f9340ad0c4c3eea6" uuid="739ecc36017ef3249479b8f01716b8bbfba9abc1" name="saw_2" x="462" y="383">
+      <params>
+         <frac32.s.map name="pitch" value="-4.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="196" y="392" text="1: Saw"/>
+   <comment type="patch/comment" x="322" y="392" text="1: Amp"/>
+   <obj type="lfo/square" sha="b4420b58ca2ae5ece53d53540bc91bc9ed7a4b83" uuid="de6909eb64db13af5b43f979a4c130024b3a4793" name="square_4" x="42" y="406">
+      <params>
+         <frac32.s.map name="pitch" value="11.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="196" y="406" text="2: Sine"/>
+   <comment type="patch/comment" x="322" y="406" text="2: Filter Pitch"/>
+   <comment type="patch/comment" x="812" y="406" text="Oscillator 2 &amp; 3 can be turned on/off with the toggle"/>
+   <comment type="patch/comment" x="322" y="420" text="3: Filter Resonance"/>
+   <obj type="mux/mux 2" sha="10c5b6d774e8c972b6bb863dad23e83034e0990f" uuid="539c246f4c360ac476e128cfbfa84348fb7f7e73" name="mux_3" x="602" y="439">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="c904cdd24d65968df2f5796e107db3747dd691a6" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_3" x="728" y="439">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/toggle" sha="f5742cc9eee76fae90a4e570c34596dd327b6c28" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99" name="VCO2 On" x="812" y="439">
+      <params>
+         <bool32.tgl name="b" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i radio 4 v" sha="37aa6f17297981ccdf9a037eecf728e7c0ff0ae4" uuid="b610704137c90b0e43464440b84bfb4fb7d2bb30" name="LFO Type" x="196" y="448">
+      <params>
+         <int32.vradio name="value" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/i" sha="e98a25a12afc62efc1991c3bb5290ccdf7214102" uuid="5e35fd0c62d81e70017289250cf28edd26e19e4a" name="i_3" x="280" y="448">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i radio 4 v" sha="37aa6f17297981ccdf9a037eecf728e7c0ff0ae4" uuid="b610704137c90b0e43464440b84bfb4fb7d2bb30" name="LFO Target" x="322" y="448">
+      <params>
+         <int32.vradio name="value" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/i" sha="e98a25a12afc62efc1991c3bb5290ccdf7214102" uuid="5e35fd0c62d81e70017289250cf28edd26e19e4a" name="i_1" x="406" y="448">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="osc/square" sha="7cccf8a95bf312ecc084f11f532cf5fda00b8c58" uuid="aa9592566d3673fe64dcaede132e9ebd45d2202f" name="square_2" x="462" y="467">
+      <params>
+         <frac32.s.map name="pitch" value="-4.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="c904cdd24d65968df2f5796e107db3747dd691a6" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_4" x="728" y="495">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="filter/integrator" sha="a02824571a17109fc739054a69ec599ecdfa052f" uuid="ac0c34004d5f65a96cd8cfc488296ed923b7beac" name="integrator_3" x="798" y="509">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mux/mux 2" sha="10c5b6d774e8c972b6bb863dad23e83034e0990f" uuid="539c246f4c360ac476e128cfbfa84348fb7f7e73" name="mux_5" x="910" y="509">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="lfo/saw down" sha="2a84a3f10fa95e49f9b9cff209cbe7f6b5e1f9ea" uuid="d831d6b82b3d559c3ba7b1b487fb292d7998fd08" name="saw_4" x="42" y="518">
+      <params>
+         <frac32.s.map name="pitch" value="-5.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="mux/mux 3" sha="4fec5506c0192d9847ceb676291b05730c44bba4" uuid="9340a203d87e774443faa0d744b56e0967b23125" name="mux_9" x="196" y="546">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux 4" sha="72ba5055b3e453fff2dcc427b38484b578a54edb" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_2" x="322" y="546">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="1036" y="588" text="Mix the three oscillators."/>
+   <obj type="ctrl/i radio 2 h" sha="b8d8c3c7534a44a1e35eda89a316a9b117d2016c" uuid="965a945535a206a17296f000802fd0cfaf0e09e0" name="Saw / Square 3" x="462" y="593">
+      <params>
+         <int32.hradio name="value" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" sha="330cd7d2342f59124b04a39d118a0ab97185ecaa" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_1" x="1484" y="616">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 3" sha="5d346e1293f2b7a8bf6bf2542e88a629e67a201e" uuid="8be16f2156012a4a8974804178cece51555f272b" name="mix_1" x="1036" y="621">
+      <params>
+         <frac32.u.map name="gain1" value="45.5"/>
+         <frac32.u.map name="gain2" value="60.0"/>
+         <frac32.u.map name="gain3" value="56.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="lfo/sine" sha="a2851b3d62ed0faceefc98038d9571422f0ce260" uuid="75f7330c26a13953215dccc3b7b9008545c9daa9" name="sine_1" x="42" y="630">
+      <params>
+         <frac32.s.map name="pitch" value="11.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="osc/saw" sha="fe2c3c02396657dfbc225c73f9340ad0c4c3eea6" uuid="739ecc36017ef3249479b8f01716b8bbfba9abc1" name="saw_3" x="462" y="649">
+      <params>
+         <frac32.s.map name="pitch" value="8.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="1204" y="658" text="Filter On/Off"/>
+   <comment type="patch/comment" x="1610" y="672" text="Distortion On/Off"/>
+   <obj type="mux/mux 2" sha="10c5b6d774e8c972b6bb863dad23e83034e0990f" uuid="539c246f4c360ac476e128cfbfa84348fb7f7e73" name="mux_4" x="602" y="677">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="c904cdd24d65968df2f5796e107db3747dd691a6" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_5" x="728" y="677">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/toggle" sha="f5742cc9eee76fae90a4e570c34596dd327b6c28" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99" name="VCO3 On" x="812" y="677">
+      <params>
+         <bool32.tgl name="b" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i" sha="b26fac2d686e81abd981a2cb0d2dd3ea2dfba53a" uuid="a3786816db6ea5bc6ac4193a5cccdb2c83b83496" name="i_2" x="1414" y="677">
+      <params>
+         <int32 name="value" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="math/==" sha="656917333ccb0d828ada5c46658123ca258a96b2" uuid="deaf0d36642c57876c4101e86f8a0b6a06021ab2" name="==_1" x="1484" y="677">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/toggle" sha="f5742cc9eee76fae90a4e570c34596dd327b6c28" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99" name="Filter On" x="1204" y="691">
+      <params>
+         <bool32.tgl name="b" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/toggle" sha="f5742cc9eee76fae90a4e570c34596dd327b6c28" uuid="42b8134fa729d54bfc8d62d6ef3fa99498c1de99" name="Distortion" x="1610" y="700">
+      <params>
+         <bool32.tgl name="b" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="1876" y="728" text="Main Volume"/>
+   <obj type="osc/square" sha="7cccf8a95bf312ecc084f11f532cf5fda00b8c58" uuid="aa9592566d3673fe64dcaede132e9ebd45d2202f" name="square_3" x="462" y="733">
+      <params>
+         <frac32.s.map name="pitch" value="8.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="c904cdd24d65968df2f5796e107db3747dd691a6" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_6" x="728" y="733">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="filter/integrator" sha="a02824571a17109fc739054a69ec599ecdfa052f" uuid="ac0c34004d5f65a96cd8cfc488296ed923b7beac" name="integrator_4" x="798" y="747">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mux/mux 2" sha="10c5b6d774e8c972b6bb863dad23e83034e0990f" uuid="539c246f4c360ac476e128cfbfa84348fb7f7e73" name="mux_6" x="910" y="747">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="filter/vcf3" sha="2a5cccf4517f54d2450ab7518925f49e4c41c837" uuid="92455c652cd098cbb682a5497baa18abbf2ef865" name="VCF Filter" x="1204" y="747">
+      <params>
+         <frac32.s.map name="pitch" value="-15.0"/>
+         <frac32.u.map name="reso" value="27.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" sha="c904cdd24d65968df2f5796e107db3747dd691a6" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_7" x="1428" y="747">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mux/mux 2" sha="10c5b6d774e8c972b6bb863dad23e83034e0990f" uuid="539c246f4c360ac476e128cfbfa84348fb7f7e73" name="mux_7" x="1498" y="747">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="stomps/distortion1" uuid="6e51dad43c4fcec9833dafa88e62bd6f183ee0f3" name="obj_1" x="1610" y="756">
+      <params>
+         <frac32.u.map name="gain" value="27.0"/>
+         <frac32.u.map name="level" value="45.0"/>
+         <int32 name="eq:lowmid" value="9"/>
+         <int32 name="eq:mid" value="7"/>
+         <int32 name="eq:highmid" value="5"/>
+         <int32 name="eq:high" value="2"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="mux/mux 2" sha="10c5b6d774e8c972b6bb863dad23e83034e0990f" uuid="539c246f4c360ac476e128cfbfa84348fb7f7e73" name="mux_8" x="1750" y="756">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/*c" sha="a73a2cafcf92eb4b6524655dcee98a569d5ddc28" uuid="7a66f52a9594e7e9eb31328ea725cb3641a80b55" name="Volume" x="1876" y="756">
+      <params>
+         <frac32.u.map name="amp" value="4.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" sha="c27566f972d15f25252f61b5cff014a3edce9706" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="2002" y="756">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mux/mux 2" sha="10c5b6d774e8c972b6bb863dad23e83034e0990f" uuid="539c246f4c360ac476e128cfbfa84348fb7f7e73" name="mux_1" x="1344" y="775">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="keyb_1" outlet="note"/>
+         <dest obj="square_1" inlet="pitch"/>
+         <dest obj="square_2" inlet="pitch"/>
+         <dest obj="square_3" inlet="pitch"/>
+         <dest obj="saw_1" inlet="pitch"/>
+         <dest obj="saw_2" inlet="pitch"/>
+         <dest obj="saw_3" inlet="pitch"/>
+      </net>
+      <net>
+         <source obj="adsr_1" outlet="env"/>
+         <dest obj="vca_1" inlet="v"/>
+         <dest obj="vca_3" inlet="v"/>
+         <dest obj="vca_5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="keyb_1" outlet="gate"/>
+         <dest obj="adsr_1" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="vca_1" outlet="o"/>
+         <dest obj="vca_2" inlet="a"/>
+      </net>
+      <net>
+         <source obj="keyb_1" outlet="velocity"/>
+         <dest obj="vca_2" inlet="v"/>
+         <dest obj="vca_4" inlet="v"/>
+         <dest obj="vca_6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_2" outlet="o"/>
+         <dest obj="integrator_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="VCF Filter" outlet="out"/>
+         <dest obj="mux_1" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="Filter On" outlet="o"/>
+         <dest obj="mux_1" inlet="s"/>
+      </net>
+      <net>
+         <source obj="Volume" outlet="out"/>
+         <dest obj="out_1" inlet="left"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="square_1" outlet="wave"/>
+         <dest obj="mux_2" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="mux_2" outlet="o"/>
+         <dest obj="vca_1" inlet="a"/>
+      </net>
+      <net>
+         <source obj="Saw/Square 1" outlet="out"/>
+         <dest obj="mux_2" inlet="s"/>
+      </net>
+      <net>
+         <source obj="vca_3" outlet="o"/>
+         <dest obj="vca_4" inlet="a"/>
+      </net>
+      <net>
+         <source obj="vca_4" outlet="o"/>
+         <dest obj="integrator_3" inlet="in"/>
+      </net>
+      <net>
+         <source obj="mux_3" outlet="o"/>
+         <dest obj="vca_3" inlet="a"/>
+      </net>
+      <net>
+         <source obj="vca_5" outlet="o"/>
+         <dest obj="vca_6" inlet="a"/>
+      </net>
+      <net>
+         <source obj="vca_6" outlet="o"/>
+         <dest obj="integrator_4" inlet="in"/>
+      </net>
+      <net>
+         <source obj="square_3" outlet="wave"/>
+         <dest obj="mux_4" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="mux_4" outlet="o"/>
+         <dest obj="vca_5" inlet="a"/>
+      </net>
+      <net>
+         <source obj="integrator_2" outlet="out"/>
+         <dest obj="mix_1" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="mux_6" outlet="o"/>
+         <dest obj="mix_1" inlet="in3"/>
+      </net>
+      <net>
+         <source obj="mux_5" outlet="o"/>
+         <dest obj="mix_1" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="mix_1" outlet="out"/>
+         <dest obj="VCF Filter" inlet="in"/>
+         <dest obj="mux_1" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="VCO2 On" outlet="o"/>
+         <dest obj="mux_5" inlet="s"/>
+      </net>
+      <net>
+         <source obj="VCO3 On" outlet="o"/>
+         <dest obj="mux_6" inlet="s"/>
+      </net>
+      <net>
+         <source obj="integrator_3" outlet="out"/>
+         <dest obj="mux_5" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="integrator_4" outlet="out"/>
+         <dest obj="mux_6" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="Saw/Square 2" outlet="out"/>
+         <dest obj="mux_3" inlet="s"/>
+      </net>
+      <net>
+         <source obj="Saw / Square 3" outlet="out"/>
+         <dest obj="mux_4" inlet="s"/>
+      </net>
+      <net>
+         <source obj="saw_1" outlet="wave"/>
+         <dest obj="mux_2" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="saw_2" outlet="wave"/>
+         <dest obj="mux_3" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="square_2" outlet="wave"/>
+         <dest obj="mux_3" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="saw_3" outlet="wave"/>
+         <dest obj="mux_4" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="LFO Target" outlet="out"/>
+         <dest obj="i_1" inlet="in"/>
+         <dest obj="==_1" inlet="in1"/>
+         <dest obj="demux_2" inlet="s"/>
+      </net>
+      <net>
+         <source obj="vca_7" outlet="o"/>
+         <dest obj="mux_7" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="i_2" outlet="out"/>
+         <dest obj="==_1" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="mux_1" outlet="o"/>
+         <dest obj="vca_7" inlet="a"/>
+         <dest obj="mux_7" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="==_1" outlet="out"/>
+         <dest obj="mux_7" inlet="s"/>
+         <dest obj="bool_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="mux_7" outlet="o"/>
+         <dest obj="obj_1" inlet="in"/>
+         <dest obj="mux_8" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="obj_1" outlet="out"/>
+         <dest obj="mux_8" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="mux_8" outlet="o"/>
+         <dest obj="Volume" inlet="in"/>
+      </net>
+      <net>
+         <source obj="Distortion" outlet="o"/>
+         <dest obj="mux_8" inlet="s"/>
+      </net>
+      <net>
+         <source obj="square_4" outlet="wave"/>
+         <dest obj="mux_9" inlet="i0"/>
+      </net>
+      <net>
+         <source obj="saw_4" outlet="wave"/>
+         <dest obj="mux_9" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="sine_1" outlet="wave"/>
+         <dest obj="mux_9" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="mux_9" outlet="o"/>
+         <dest obj="demux_2" inlet="i"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o1"/>
+         <dest obj="vca_7" inlet="v"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o2"/>
+         <dest obj="VCF Filter" inlet="pitch"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o3"/>
+         <dest obj="VCF Filter" inlet="reso"/>
+      </net>
+      <net>
+         <source obj="LFO Type" outlet="out"/>
+         <dest obj="mux_9" inlet="s"/>
+         <dest obj="i_3" inlet="in"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+      <MidiChannel>1</MidiChannel>
+      <NPresets>8</NPresets>
+      <NPresetEntries>32</NPresetEntries>
+      <NModulationSources>8</NModulationSources>
+      <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+      <Author>Jan Vantomme</Author>
+      <License>LGPL</License>
+   </settings>
+   <notes><![CDATA[Bass patch inspired by the Korg Volca Bass.
+
+]]></notes>
+   <windowPos>
+      <x>11</x>
+      <y>22</y>
+      <width>1440</width>
+      <height>874</height>
+   </windowPos>
+</patch-1.0>
