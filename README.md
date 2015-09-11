@@ -8,6 +8,11 @@ A collection of patches for the [Axoloti](http://axoloti.be/) platform. All patc
 * SimpleBassADSR: Same as SimpleBass, but with an ADSR envelope for each oscillator.
 * SuperBass: A bass synthesizer inspired by the Korg Volca Bass.
 
+## Lead
+
+* Screamlead-001
+* Screamlead-Dirty
+
 ## Pads
 
 * 8BitPad
